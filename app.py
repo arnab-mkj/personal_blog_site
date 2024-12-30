@@ -1,10 +1,16 @@
-from flask import Flask
+import json
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
+def get_blogs():
+    with open('blogs.json', 'r') as f:
+        return json.load(f)
+
 @app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
+def index():
+    blogs = get_blogs()
+    return render_template('home.html', blogs=blogs)
 
 if __name__ == "__main__":
-  app.run(host='0.0.0.0', debug=True)
+    app.run(debug=True)

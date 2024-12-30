@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "title": "Let's start with some Machine Learning",
+        "description": "Delve into the world of ML basics with me!",
+        "link": "topics/topic1.html"
+    },
+    {
+        "id": 2,
+        "title": "Understanding Flask",
+        "description": "Learn how Flask works and build web apps.",
+        "link": "topics/topic2.html"
+    }
+]
